@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>jogo do numero secreto</title>
+	
+
+</head>
+
+<body>
+<h1>jogo da adivinhação</h1>
+<p>tente adivinhar o numero entre 1 e 10</p>
+<input type="number" id="palpite" placeholder="Digite o seu palpite">
+<button onclick="adivinhar()">Adivinhar</button>
+<p id="resultado"></p>
+
+	<script>
+	let numeroSecreto = Math.floor(Math.random() * 10) + 1;
+	console.log(numeroSecreto);
+
+	function adivinhar() {
+		const palpite = parseInt(document.getElementById("palpite").value);
+		const resultado = document.getElementById("resultado");
+
+		if (palpite === numeroSecreto) {
+			resultado.innerText = "Parabens! Você acertou";
+		} else if (palpite < numeroSecreto) {
+			resultado.innerText = "Tente um numero maior";
+		} else {
+			resultado.innerText = "Tente um numero menor";
+		}
+	}
+ 	
+				
+	</script>
+</body>
+
+</html>
