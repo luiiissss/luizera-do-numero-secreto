@@ -5,16 +5,41 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 	<title>jogo do numero secreto</title>
-	
+	<style>
+		body {
+			background-color: yellow;
+			text-align: center;
+		}
+		.texto {
+			color: yellow;
+		}
+		.box {
+			width: 350px;
+            height: 180px;
+            background-color: blue;
+            border: 2px solid #ccc; 
+            border-radius: 40px;
+            padding: 50px;
+            margin: 10px;
+            text-align: center;
+            display: inline-block;
+
+
+		}
+	</style>
 
 </head>
 
 <body>
-<h1>jogo da adivinhação</h1>
-<p>tente adivinhar o numero entre 1 e 10</p>
+<div class="box">
+<h1 class="texto">jogo da adivinhação</h1>
+<p class="texto">tente adivinhar o numero entre 1 e 10</p>
 <input type="number" id="palpite" placeholder="Digite o seu palpite">
+<br>
+<br>
 <button onclick="adivinhar()">Adivinhar</button>
-<p id="resultado"></p>
+<p id="resultado" class="texto"></p>
+</div>
 
 	<script>
 	let numeroSecreto = Math.floor(Math.random() * 10) + 1;
